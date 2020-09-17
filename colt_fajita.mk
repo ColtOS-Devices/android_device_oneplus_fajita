@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
 # Inherit some common Colt stuff.
-$(call inherit-product, vendor/colt/config/common_full_phone.mk)
+$(call inherit-product, vendor/colt/config/common.mk)
 TARGET_FACE_UNLOCK_SUPPORTED := true
 
 PRODUCT_NAME := colt_fajita
@@ -34,7 +34,10 @@ PRODUCT_MODEL := ONEPLUS A6010
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=OnePlus6T \
-    PRODUCT_NAME=OnePlus6T 
+    TARGET_DEVICE=OnePlus6T \
+    PRODUCT_NAME=OnePlus6T \
+    PRIVATE_BUILD_DESC="OnePlus6T-user 9 PKQ1.180716.001 1812260627 release-keys"
 
 COLT_DEVICE_MAINTAINER := Ziauddin_Sameer
+
+BUILD_FINGERPRINT := OnePlus/OnePlus6/OnePlus6:8.1.0/OPM1.171019.011/06140300:user/release-keys
